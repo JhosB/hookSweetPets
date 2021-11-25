@@ -1,7 +1,8 @@
 <?php
-    $contraseña = '';
-    $usuario = 'root';
+    $contraseña = "SweetPets2021";
+    $usuario = "u991668360_SweetPets";
     $nombre_bd = 'u991668360_SweetPets';
+    $port = '3306';
 
     try {
         $bd = new PDO(
@@ -9,6 +10,7 @@
             dbname='.$nombre_bd,
             $usuario,
             $contraseña,
+            $port,
             /* array para que reconozca todos los caracteres especiales*/
             array(PDO::MYSQL_ATTR_INIT_COMMAND => "SET NAMES utf8")
         );
